@@ -1,15 +1,16 @@
 package com.sid;
 
-import com.sid.data.DataProcessor;
-import com.sid.data.IpInfo;
-import java.io.IOException;
+import com.sid.gui.MainWindow;
 
-public class Svet 
+public class Svet
 {
     public static void main( String[] args )
     {
+       MainWindow main = new MainWindow();
 
-            DataProcessor dp = new DataProcessor();
+
+
+        /*DataProcessor dp = new DataProcessor();
 
         try {
             dp.printAllRecords();
@@ -18,7 +19,7 @@ public class Svet
         } catch (IOException e){
             e.printStackTrace();
         }
-
+*/
 
 
     }
