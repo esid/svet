@@ -2,6 +2,7 @@ package com.sid.gui.components;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
 import java.awt.*;
 
 public class CalcFormContainer extends JPanel {
@@ -9,61 +10,72 @@ public class CalcFormContainer extends JPanel {
     private JTextField PrevMField;
     private JLabel CurrentMFieldLabel;
     private JLabel PrevMFieldLabel;
-    private JButton Culculate;
-    private JLabel ErrorMessage;
+    private JButton CalculateBtn;
 
-    private GridLayout layout;
+    private CompoundBorder border;
+    private GridBagLayout layout;
+    private GridBagConstraints gc;
 
     public CalcFormContainer() {
-        CurrentMField = new JTextField();
-        PrevMField = new JTextField();
+        CurrentMField = new JTextField(15);
+        PrevMField = new JTextField(15);
         CurrentMFieldLabel = new JLabel("Current month: ");
         PrevMFieldLabel = new JLabel("Previous month: ");
-        Culculate = new JButton("Culculate");
-        ErrorMessage = new JLabel();
+        CalculateBtn = new JButton("Calculate");
 
-        //CurrentMField.setPreferredSize(new Dimension(1, 2));
-        //CurrentMField.setMaximumSize(new Dimension(1, 2));
-        setMaximumSize(new Dimension(20, 30));
-        setMinimumSize(new Dimension(20, 30));
-        setPreferredSize(new Dimension(20, 30));
 
-        layout= new GridLayout(2,1);
-        layout.setHgap(5);
-        layout.setVgap(6);
+        border = createBorder();
 
+        layout = new GridBagLayout();
+        gc = new GridBagConstraints();
 
         setLayout(layout);
-        setElements();
-        Border border = BorderFactory.createTitledBorder("Calculate the svet payment");
         setBorder(border);
+        setElements();
+    }
+
+    private CompoundBorder createBorder() {
+        Border out = BorderFactory.createEmptyBorder(15,15,15,15);
+        Border named = BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Calculate the svet payment");
+        return BorderFactory.createCompoundBorder(out, named);
     }
 
     private void setElements() {
+        gc.gridx = 0;
+        gc.gridy = 0;
+        gc.weightx = 1;
+        gc.fill = GridBagConstraints.NONE;
+        gc.anchor = GridBagConstraints.LINE_START;
 
-        JPanel CurrM = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        CurrM.setSize(new Dimension(12,12));
-        CurrM.setVisible(true);
-        CurrM.add(CurrentMFieldLabel);
-        CurrM.add(CurrentMField);
-        JPanel PrevM = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        PrevM.setSize(450, 50);
-        PrevM.setVisible(true);
-        PrevM.add(PrevMFieldLabel);
-        PrevM.add(PrevMField);
+        /////// set current ///
+        CurrentMFieldLabel.setFont(new Font(CurrentMFieldLabel.getFont().getName(), Font.PLAIN, 16));
+        gc.weighty = 0.3;
+        gc.insets = new Insets(12, 12, 0, 0);
+        add(CurrentMFieldLabel, gc);
 
-        CurrentMFieldLabel.setFont(new Font(CurrentMFieldLabel.getFont().getName(), Font.PLAIN, 14));
-        PrevMFieldLabel.setFont(new Font(PrevMFieldLabel.getFont().getName(), Font.PLAIN, 14));
+        gc.gridx = 1;
+        add(CurrentMField, gc);
 
-        CurrentMField.setBounds(1, 2, 3, 4);
-        add(CurrM, 0);
-        add(PrevM, 1);
-       /* add(CurrentMFieldLabel, 0);
-        add(CurrentMField, 1);
-        add(PrevMFieldLabel, 2);
-        add(PrevMField, 3);
-        add(Culculate, 4);
-        add(ErrorMessage, 5);  */
+        /////// set previous ///
+        PrevMFieldLabel.setFont(new Font(PrevMFieldLabel.getFont().getName(), Font.PLAIN, 16));
+        gc.weighty = 0.3;
+        gc.gridy = 1;
+        gc.gridx = 0;
+        gc.insets = new Insets(0, 12, 0, 0);
+        add(PrevMFieldLabel, gc);
+
+        gc.gridx = 1;
+        add(PrevMField, gc);
+
+        /////// set button///
+        CalculateBtn.setFont(new Font(CalculateBtn.getFont().getName(), Font.PLAIN, 18));
+        gc.weighty = 1.0;
+        gc.gridy = 2;
+        gc.gridx = 0;
+        gc.anchor = GridBagConstraints.FIRST_LINE_START;
+        gc.insets = new Insets(30, 12, 0, 0);
+        add(CalculateBtn, gc);
+
 
     }
 }

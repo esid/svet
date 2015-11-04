@@ -4,16 +4,29 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainFrame extends JFrame {
-    CalcFormContainer container;
+    private UpperPanel upper;
+    private CalcFormContainer container;
+    private FooterPanel footer;
+    private BorderLayout layout;
 
     public MainFrame() throws HeadlessException {
         super("Svet calculator");
 
+        layout = new BorderLayout();
+
+
+        upper = new UpperPanel(this);
         container = new CalcFormContainer();
-        add(container);
-        pack();
+        footer = new FooterPanel(this);
+        setLayout(layout);
+
+        add(upper, BorderLayout.NORTH);
+        add(container, BorderLayout.CENTER);
+        add(footer, BorderLayout.SOUTH);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(600, 500);
+        setSize(500, 450);
+        setResizable(false);
         setVisible(true);
     }
 }
