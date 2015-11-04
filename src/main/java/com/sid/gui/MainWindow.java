@@ -15,6 +15,7 @@ public class MainWindow extends JFrame {
     private JLabel Sum;
     private JPanel ErrorPanel;
     private JLabel errorText;
+    private JPanel CalcFormContainer;
 
     public MainWindow() {
         Prepare();
@@ -80,7 +81,5 @@ public class MainWindow extends JFrame {
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
-
-
 
 }

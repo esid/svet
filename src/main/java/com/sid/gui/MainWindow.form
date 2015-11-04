@@ -10,7 +10,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <grid id="4de64" layout-manager="GridLayoutManager" row-count="6" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="7" vgap="2">
+      <grid id="4de64" binding="CalcFormContainer" layout-manager="GridLayoutManager" row-count="6" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="7" vgap="2">
         <margin top="30" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="1" column="0" row-span="8" col-span="3" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false">

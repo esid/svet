@@ -1,12 +1,14 @@
 package com.sid;
 
 import com.sid.gui.MainWindow;
+import com.sid.gui.components.MainFrame;
 
 public class Svet
 {
     public static void main( String[] args )
     {
-       MainWindow main = new MainWindow();
+      // MainWindow main = new MainWindow();
+        MainFrame frame = new MainFrame();
 
 
 
