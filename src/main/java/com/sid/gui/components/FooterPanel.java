@@ -15,7 +15,7 @@ public class FooterPanel extends JPanel {
 
     public FooterPanel(JFrame main) {
         mainFrame = main;
-        
+
         closeButton = new JButton("Close");
         closeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

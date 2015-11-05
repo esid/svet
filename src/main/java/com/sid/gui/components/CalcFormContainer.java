@@ -1,10 +1,13 @@
 package com.sid.gui.components;
 
 import com.sid.Calc;
+import com.sid.validation.NumberFieldFilter;
+import com.sid.validation.Validation;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
+import javax.swing.text.PlainDocument;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -83,6 +86,7 @@ public class CalcFormContainer extends JPanel {
         add(currentMFieldLabel, gc);
 
         gc.gridx = 1;
+        Validation.setNumberOnly(currentMField);
         add(currentMField, gc);
 
         /////// set previous ///
@@ -94,6 +98,7 @@ public class CalcFormContainer extends JPanel {
         add(prevMFieldLabel, gc);
 
         gc.gridx = 1;
+        Validation.setNumberOnly(prevMField);
         add(prevMField, gc);
 
         /////// set button///
