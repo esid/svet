@@ -5,8 +5,13 @@
   <artifactId>svet</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>svet-DarchetypeArtifactId=maven-archetype-quickstart</name>
-  <url>http://maven.apache.org</url>
+  <name>Svet</name>
+
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -29,12 +34,13 @@
 			<configuration>
 			  <archive>
 			    <manifest>
-				<addClasspath>true</addClasspath>
-				<mainClass>com.sid.Svet</mainClass>
+                    <addClasspath>true</addClasspath>
+                    <mainClass>com.sid.Svet</mainClass>
 				</manifest>
 			  </archive>
 			</configuration>
 		</plugin>
+
       </plugins>
   </build>
 </project>

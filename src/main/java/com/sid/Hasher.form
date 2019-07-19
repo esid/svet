@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.sid.Hasher">
+  <grid id="27dc6" binding="HashLable" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="500" height="685"/>
+    </constraints>
+    <properties>
+      <autoscrolls value="false"/>
+      <enabled value="true"/>
+      <focusable value="false"/>
+      <font size="18"/>
+    </properties>
+    <clientProperties>
+      <html.disable class="java.lang.Boolean" value="true"/>
+    </clientProperties>
+    <border type="none"/>
+    <children>
+      <grid id="5fea9" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="12">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="25" left="15" bottom="0" right="15" weightx="1.0" weighty="0.5"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="54bae" class="javax.swing.JLabel" binding="InputValue">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <text value="Enter text to generate hash"/>
+            </properties>
+          </component>
+          <component id="11171" class="javax.swing.JTextField" binding="Input">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="1" use-parent-layout="false">
+                <minimum-size width="2" height="2"/>
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="18"/>
+            </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="true"/>
+            </clientProperties>
+          </component>
+          <component id="2a1eb" class="javax.swing.JTextArea" binding="Output">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="1" indent="1" use-parent-layout="false">
+                <minimum-size width="2" height="2"/>
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <editable value="false"/>
+              <font size="20" style="0"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="a2da2" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="2">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="11" bottom="23" right="11" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="6ec6" class="javax.swing.JButton" binding="hash">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="14"/>
+              <text value="Generate"/>
+            </properties>
+          </component>
+          <component id="709b" class="javax.swing.JButton" binding="Close">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <contentAreaFilled value="false"/>
+              <font size="14"/>
+              <text value="Close"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
